@@ -19,7 +19,7 @@ metrics:
       median_score: [4, 6]
       max_score: [7, 10]
     prompt: |
-      You are evaluating a clinical guidelines AI assistant for Texas Children's Hospital.
+      You are evaluating a clinical guidelines AI assistant for TCH.
       The assistant is supposed to answer clinical questions ONLY using EBOC (Evidence-Based
       Outcomes Center) guidelines and must cite its sources.
 

@@ -62,7 +62,7 @@ def main():
     )
 
     st.title("EBOC Clinical Guidelines Assistant")
-    st.caption("Texas Children's Hospital — Evidence-Based Outcomes Center")
+    st.caption("TCH — Evidence-Based Outcomes Center")
 
     with st.sidebar:
         st.header("Settings")

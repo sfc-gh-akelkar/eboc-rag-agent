@@ -1,6 +1,6 @@
 # EBOC Clinical Guidelines RAG Agent
 
-AI-powered question-answering over Texas Children's Hospital Evidence-Based Outcomes Center (EBOC) clinical practice guidelines. Built on Snowflake Cortex AI.
+AI-powered question-answering over TCH Evidence-Based Outcomes Center (EBOC) clinical practice guidelines. Built on Snowflake Cortex AI.
 
 ## Architecture
 
