@@ -162,7 +162,7 @@ SELECT COUNT(*) FROM EBOC_RAG.AGENT_EVAL_DATA;
 
 **2. Upload the evaluation config to the stage via Snowsight**:
 
-1. In Snowsight, navigate to **Data > Databases > EXPLORER_SANDBOX > EBOC_RAG > Stages > EVAL_CONFIG**
+1. In Snowsight, navigate to **Databases > EXPLORER_SANDBOX > EBOC_RAG > Stages > EVAL_CONFIG**
 2. Click **+ Files** in the top right
 3. Upload `eval/eboc_eval_config.yaml` from this repo
 4. Ensure "Auto compress" is **unchecked**
