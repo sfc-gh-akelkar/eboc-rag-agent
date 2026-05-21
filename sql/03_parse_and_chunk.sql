@@ -3,7 +3,7 @@
 -- Prerequisites: 01_setup.sql and 02_category_map.sql have been run, PDFs uploaded to stage.
 
 USE ROLE TCH_SANDBOX_ROLE;
-USE WAREHOUSE EXPLORER_WH;
+USE WAREHOUSE EXPLORER_XS_WH;
 
 -- Step 1: Parse all PDFs (extracts text with markdown structure)
 CREATE OR REPLACE TABLE EXPLORER_SANDBOX.EBOC_RAG.RAW_TEXT AS

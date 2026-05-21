@@ -3,7 +3,7 @@
 -- All agents enforce strict grounding: answers come ONLY from EBOC guidelines.
 
 USE ROLE TCH_SANDBOX_ROLE;
-USE WAREHOUSE EXPLORER_WH;
+USE WAREHOUSE EXPLORER_XS_WH;
 
 ------------------------------------------------------------
 -- UNIVERSAL AGENT (searches all 55 guidelines, no filter)
