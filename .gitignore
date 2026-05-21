@@ -1,0 +1,7 @@
+pdfs/
+node_modules/
+.next/
+.env.local
+*.pyc
+__pycache__/
+.DS_Store

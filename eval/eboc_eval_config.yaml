@@ -1,0 +1,64 @@
+evaluation:
+  agent_params:
+    agent_name: "EXPLORER_SANDBOX.EBOC_RAG.EBOC_UNIVERSAL_AGENT"
+    agent_type: "CORTEX AGENT"
+  run_params:
+    label: "EBOC Universal Agent - Full Evaluation"
+    description: "Evaluates the universal EBOC agent across 12 clinical questions spanning all specialties. Tests answer correctness, logical consistency, and clinical grounding."
+  source_metadata:
+    type: "dataset"
+    dataset_name: "EBOC_EVAL_DATASET"
+
+metrics:
+  - "answer_correctness"
+  - "logical_consistency"
+
+  - name: "clinical_grounding"
+    score_ranges:
+      min_score: [1, 3]
+      median_score: [4, 6]
+      max_score: [7, 10]
+    prompt: |
+      You are evaluating a clinical guidelines AI assistant for Texas Children's Hospital.
+      The assistant is supposed to answer clinical questions ONLY using EBOC (Evidence-Based
+      Outcomes Center) guidelines and must cite its sources.
+
+      Evaluate the agent's response on clinical grounding. Rate from 1-10 where:
+      1 = Response contains fabricated medical information not found in any guideline
+      3 = Response mixes guideline content with unsupported general medical knowledge
+      5 = Response is mostly grounded but missing citations or includes minor unsupported claims
+      7 = Response is well-grounded in guideline content with proper citations
+      9 = Response is perfectly grounded, every claim is supported by retrieved content, citations are specific
+      10 = Perfect grounding with specific guideline name and section citations for every claim
+
+      Consider:
+      - Does the response contain ONLY information that could reasonably come from the EBOC guidelines?
+      - Are sources cited in the format [Guideline Name, Section]?
+      - Does the response avoid adding general medical knowledge not in the guidelines?
+      - If the topic is not covered, does the agent explicitly say so?
+
+      Agent output: {{output}}
+      Expected ground truth: {{ground_truth}}
+
+  - name: "citation_accuracy"
+    score_ranges:
+      min_score: [1, 3]
+      median_score: [4, 6]
+      max_score: [7, 10]
+    prompt: |
+      Evaluate whether the agent's response includes proper source citations.
+      Rate from 1-10 where:
+      1 = No citations provided at all
+      3 = Vague citations (e.g., "according to the guidelines" without specifying which)
+      5 = Partial citations (guideline name mentioned but no section)
+      7 = Good citations with guideline name and general section reference
+      10 = Excellent citations with specific guideline name, section, and consistent formatting
+
+      Consider:
+      - Are citations present in the response?
+      - Do they name a specific EBOC guideline?
+      - Do they reference a specific section within that guideline?
+      - Is the citation format consistent throughout the response?
+
+      Agent output: {{output}}
+      Expected ground truth: {{ground_truth}}
