@@ -2,8 +2,8 @@
 -- Creates the lookup table that maps PDF filenames to guideline names, categories, and source URLs.
 -- This enables per-specialty filtering and clean citations.
 
-USE ROLE SF_INTELLIGENCE_DEMO;
-USE WAREHOUSE APP_WH;
+USE ROLE TCH_SANDBOX_ROLE;
+USE WAREHOUSE EXPLORER_WH;
 
 CREATE OR REPLACE TABLE EXPLORER_SANDBOX.EBOC_RAG.CATEGORY_MAP (
     pdf_filename VARCHAR,

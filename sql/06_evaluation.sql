@@ -2,8 +2,8 @@
 -- Creates the evaluation dataset, file format, stage, and provides instructions for running evaluations.
 -- Prerequisites: 05_agents.sql has been run.
 
-USE ROLE SF_INTELLIGENCE_DEMO;
-USE WAREHOUSE APP_WH;
+USE ROLE TCH_SANDBOX_ROLE;
+USE WAREHOUSE EXPLORER_WH;
 USE DATABASE EXPLORER_SANDBOX;
 USE SCHEMA EBOC_RAG;
 

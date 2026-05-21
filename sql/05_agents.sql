@@ -2,8 +2,8 @@
 -- Creates the universal EBOC agent and 4 specialty agents.
 -- All agents enforce strict grounding: answers come ONLY from EBOC guidelines.
 
-USE ROLE SF_INTELLIGENCE_DEMO;
-USE WAREHOUSE APP_WH;
+USE ROLE TCH_SANDBOX_ROLE;
+USE WAREHOUSE EXPLORER_WH;
 
 ------------------------------------------------------------
 -- UNIVERSAL AGENT (searches all 55 guidelines, no filter)

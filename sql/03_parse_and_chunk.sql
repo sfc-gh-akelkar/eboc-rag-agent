@@ -2,8 +2,8 @@
 -- Parses all PDFs with AI_PARSE_DOCUMENT and chunks with SPLIT_TEXT_MARKDOWN_HEADER.
 -- Prerequisites: 01_setup.sql and 02_category_map.sql have been run, PDFs uploaded to stage.
 
-USE ROLE SF_INTELLIGENCE_DEMO;
-USE WAREHOUSE APP_WH;
+USE ROLE TCH_SANDBOX_ROLE;
+USE WAREHOUSE EXPLORER_WH;
 
 -- Step 1: Parse all PDFs (extracts text with markdown structure)
 CREATE OR REPLACE TABLE EXPLORER_SANDBOX.EBOC_RAG.RAW_TEXT AS

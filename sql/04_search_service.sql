@@ -2,13 +2,13 @@
 -- Creates the Cortex Search Service with hybrid search over all EBOC chunks.
 -- ATTRIBUTES enable per-specialty filtering and diversity scoring.
 
-USE ROLE SF_INTELLIGENCE_DEMO;
-USE WAREHOUSE APP_WH;
+USE ROLE TCH_SANDBOX_ROLE;
+USE WAREHOUSE EXPLORER_WH;
 
 CREATE OR REPLACE CORTEX SEARCH SERVICE EXPLORER_SANDBOX.EBOC_RAG.EBOC_SEARCH
   ON chunk
   ATTRIBUTES category, guideline_name
-  WAREHOUSE = APP_WH
+  WAREHOUSE = EXPLORER_WH
   TARGET_LAG = '1 day'
   EMBEDDING_MODEL = 'snowflake-arctic-embed-l-v2.0'
 AS (
